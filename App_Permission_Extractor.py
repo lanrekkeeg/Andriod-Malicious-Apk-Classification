@@ -1,11 +1,11 @@
 import re
 import os
 
-dir = "C:\\Users\\Faisal Khan\Desktop\\Machine-learning\\project\\Data-set\\drebin\\drebin-0\\drebin-0"
-change_to = "C:\\Users\\Faisal Khan\Desktop\\Machine-learning\\project\\Data-set\\drebin\\drebin-0\\drebin-0\\"
+dir = "C:\\Users\\<user-name>\Desktop\\Machine-learning\\project\\Data-set\\drebin\\drebin-0\\drebin-0"
+change_to = "C:\\Users\\<use-name>\Desktop\\Machine-learning\\project\\Data-set\\drebin\\drebin-0\\drebin-0\\"
 
 root, dirs, files = os.walk(dir).__next__()
-out = open("feature.txt",'w')
+out = open("App_uses_permission.txt",'w')
 for folder in dirs:
 	new_Dir = change_to+folder
 	app_Hash_Key = folder.strip(".zip.out")
