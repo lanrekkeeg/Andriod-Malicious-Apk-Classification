@@ -1,3 +1,4 @@
+# tested for windows 10
 import os
 import subprocess
 dir = "<your path to data-set folder>"
