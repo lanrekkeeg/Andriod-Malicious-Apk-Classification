@@ -1,11 +1,14 @@
 import re
 import os
 
+# path to data-set folder
 dir = "C:\\Users\\<user-name>\Desktop\\Machine-learning\\project\\Data-set\\drebin\\drebin-0\\drebin-0"
-change_to = "C:\\Users\\<use-name>\Desktop\\Machine-learning\\project\\Data-set\\drebin\\drebin-0\\drebin-0\\"
+# path to APK folder in data-set folder
+change_to = "C:\\Users\\<user-name>\Desktop\\Machine-learning\\project\\Data-set\\drebin\\drebin-0\\drebin-0\\"
 
 root, dirs, files = os.walk(dir).__next__()
-out = open("App_uses_permission.txt",'w')
+out = open("feature.txt",'w')
+temp = " "
 for folder in dirs:
 	new_Dir = change_to+folder
 	app_Hash_Key = folder.strip(".zip.out")
@@ -25,7 +28,9 @@ for folder in dirs:
 	for line in line_list:
 		feature_Word = line.strip().split(".",)
 		feature_Word = feature_Word[len(feature_Word)-1].strip("\"/>")
-		out.write(" ")
-		out.write(feature_Word)
+		if temp != feature_Word:   # to avoid duplication
+			out.write(" ")
+			out.write(feature_Word)
+		temp = feature_Word
 	out.write('\n')
 		
