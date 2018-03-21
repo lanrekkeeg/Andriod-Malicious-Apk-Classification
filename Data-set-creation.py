@@ -19,7 +19,7 @@ def Malware_Label(apk):
 		if apk == ap:
 			return list_2[ind]
 	return "No Label"
-# return true or false if exit or not
+# Mark 1 or 0 against each feature if exits or not
 def Mark_0_OR_1(feat):
 	check = True
 	for per in list:
