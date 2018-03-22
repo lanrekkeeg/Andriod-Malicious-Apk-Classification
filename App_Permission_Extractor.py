@@ -7,7 +7,7 @@ dir = "C:\\Users\\<user-name>\Desktop\\Machine-learning\\project\\Data-set\\dreb
 change_to = "C:\\Users\\<user-name>\Desktop\\Machine-learning\\project\\Data-set\\drebin\\drebin-0\\drebin-0\\"
 
 root, dirs, files = os.walk(dir).__next__()
-out = open("feature.txt",'w')
+out = open("Apk-permissions.txt",'w')
 temp = " "
 for folder in dirs:
 	new_Dir = change_to+folder
