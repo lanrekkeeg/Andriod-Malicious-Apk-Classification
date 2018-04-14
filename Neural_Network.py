@@ -8,7 +8,7 @@ def prediction(X,W_L_1,W_L_2,L_1_b,L_2_b,Y):
 		L_1_A = tanh(L_1_Z)
 		L_2_Z = forwar_Pass(L_1_A, W_L_2, L_2_b)
 		activation = tanh(L_2_Z)
-		label = 0 if activation <0.5 else 1
+		label = 0 if activation < 0 else 1
 		print("activation={}; predicted_label={}, true_label={}".format(activation, label, Y[i]))
 
 def tanh_derivative(Z):
